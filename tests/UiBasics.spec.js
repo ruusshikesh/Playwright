@@ -50,7 +50,7 @@ test('Page Playwright test',async ({page})=>{
     await expect(page).toHaveTitle("Google");
 });
 
-test.only('UI Controls', async({browser})=>{
+test('UI Controls', async({browser})=>{
     
     const context = await browser.newContext();
     const page = await context.newPage();
