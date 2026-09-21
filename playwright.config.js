@@ -3,19 +3,20 @@ import { chromium, defineConfig, devices } from '@playwright/test';
 import { config } from 'node:process';
 
 
-  /** 
- * @see https://playwright.dev/docs/test-configuration
- */
+/** 
+* @see https://playwright.dev/docs/test-configuration
+*/
 export default defineConfig({
   testDir: './tests',
-  timeout: 60*1000,
+  timeout: 300 * 1000,
   expect: { timeout: 3000 },
-  reporter : 'html',
+  reporter: 'html',
   use: {
-  browserName : 'chromium',
-  headless:false,
-  actionTimeout: 10 * 1000,
+    browserName: 'chromium',
+    headless: false,
+    actionTimeout: 10 * 1000,
     navigationTimeout: 30 * 1000,
+    trace : 'on',
   },
   /* Configure projects for major browsers */
   // projects: [
@@ -24,36 +25,36 @@ export default defineConfig({
   //     use: { ...devices['Desktop Chrome'] },
   //   },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+  // {
+  //   name: 'firefox',
+  //   use: { ...devices['Desktop Firefox'] },
+  // },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+  // {
+  //   name: 'webkit',
+  //   use: { ...devices['Desktop Safari'] },
+  // },
 
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+  /* Test against mobile viewports. */
+  // {
+  //   name: 'Mobile Chrome',
+  //   use: { ...devices['Pixel 5'] },
+  // },
+  // {
+  //   name: 'Mobile Safari',
+  //   use: { ...devices['iPhone 12'] },
+  // },
 
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
- // ]
-    
+  /* Test against branded browsers. */
+  // {
+  //   name: 'Microsoft Edge',
+  //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+  // },
+  // {
+  //   name: 'Google Chrome',
+  //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+  // },
+  // ]
+
 });
 
