@@ -27,7 +27,7 @@ class DashboardPage {
     }
 
     async navigateToCart(){
-     await this.cart.click();
+    await this.cart.click();
     }
 
 }

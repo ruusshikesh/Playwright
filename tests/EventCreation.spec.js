@@ -1,7 +1,7 @@
 const{test,expect} = require('@playwright/test');
 const { text } = require('node:stream/consumers');
 
-test('Event Creation', async({browser}) =>{
+test('@Web Event Creation', async({browser}) =>{
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -50,8 +50,6 @@ test('Event Creation', async({browser}) =>{
     //Assertions for Count if it is reduced or not
 
     await page.locator("[id='nav-events']").click();
-
-    await page.pause();
 
     // Located by CSS class
   const bookingRefEl = page.locator('.booking-ref').first();

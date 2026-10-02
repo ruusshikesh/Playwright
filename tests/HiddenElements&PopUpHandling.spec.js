@@ -14,7 +14,6 @@ test('Hidden Elements & Pop Up Handling',async({browser})=>{
     //To reject the POP Up click below  
     //page.on('dialog',dialog => dialog.dismiss());    
     await page.locator("#confirmbtn").click();
-    await page.pause();
     await page.locator("#mousehover").hover();
 
 })

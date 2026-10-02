@@ -9,9 +9,5 @@ test('More Validations',async({browser})=>{
     await page.goto("https://google.com");
     await page.goBack();
     await page.goForward();
-    await page.pause();
-    
-
-
 
 })

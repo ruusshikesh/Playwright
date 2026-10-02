@@ -20,5 +20,4 @@ test('Security Test request interception', async ({page}) => {
         async route => await route.continue({/*You can use headers as well to intercept*/ url:'https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id=6aaff6e72be7a4bc2b5d8241'}) );
     
     await page.locator("button:has-text('View')").first().click();
-    await page.pause();
 })

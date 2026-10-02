@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/NetworkTest2.spec.js --headed"
-
+    "test": "npx playwright test tests/NetworkTest2.spec.js --headed",
+    "regression": "npm run test",
+    "webTest": "npx playwright test --grep '@Web'",
+    "APITest": "npx playwright test --grep '@API'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.62.1",
-    "@types/node": "^26.4.1"
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.4.1",
+    "allure-playwright": "^3.12.2"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.9.0"
   }
 }

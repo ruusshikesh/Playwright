@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test');
 
 // BROWSER LAUNCH CODE
 test('Browser Playwright test',async ({browser})=>{
-    
+
     const context = await browser.newContext();
     const page = await context.newPage();
 

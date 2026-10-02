@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
+
 test('Screenshot & Visual Comparison', async ({ browser }) => {
 
     const context = await browser.newContext();
@@ -24,7 +25,7 @@ test('Screenshot & Visual Comparison', async ({ browser }) => {
 
 })
 
-test.only('Visual Comparison',async({page}) => {
+test('Visual Comparison',async({page}) => {
 
     await page.goto("https://www.google.com/");
     await page.waitForLoadState('networkidle');

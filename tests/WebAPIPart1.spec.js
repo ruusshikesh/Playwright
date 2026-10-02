@@ -74,6 +74,5 @@ test('Main Login',async({browser})=>{
     }
     const orderIdDetails = await page.locator(".col-text").first().textContent();
     expect(orderID.includes(orderIdDetails)).toBeTruthy();
-    await page.pause();
 
 })

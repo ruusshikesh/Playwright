@@ -11,6 +11,10 @@ const dataSet = JSON.parse(JSON.stringify(require('../utils/PlaceOrderTestData.j
 //Created Fixture for base data and Pulling it via fixture
 const {customtest} = require('../utils/testbase');
 
+//Serial & Parallel Execution Configration
+test.describe.configure({mode:'serial'});
+//test.describe.configure({mode:'parallel'});
+
 for(const data of dataSet)
     {
 test(`End to end Web automation for ${data.productName}`, async ({ browser }) => 
@@ -43,7 +47,7 @@ test(`End to end Web automation for ${data.productName}`, async ({ browser }) =>
 
 });
     }
-customtest.only('End to end Web automation with test data driven via Fixtures', async ({ browser,testDataForOrder }) => 
+customtest('End to end Web automation with test data driven via Fixtures', async ({ browser,testDataForOrder }) => 
     {
     const context = await browser.newContext();
     const page = await context.newPage();

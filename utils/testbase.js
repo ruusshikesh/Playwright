@@ -4,8 +4,8 @@ exports.customtest = base.test.extend(
 
     {
         testDataForOrder: {
-            username: "ruusshikesh123@gmail.com",
-            password: "Rushikesh@12",
+            username: "rahulshetty@gmail.com",
+            password: "Iamking@000",
             productName: "ADIDAS ORIGINAL",
             countryName: "Cuba"
         }

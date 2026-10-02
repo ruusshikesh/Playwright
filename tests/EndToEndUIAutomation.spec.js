@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
 
-test('End to end Web automation',async({browser})=>{
+test('@Web End to end Web automation',async({browser})=>{
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -104,5 +104,5 @@ test('End to end Web automation',async({browser})=>{
     }
     const orderIdDetails = await page.locator(".col-text").first().textContent();
     expect(OrderID.includes(orderIdDetails)).toBeTruthy();
-    await page.pause();
+    
 })

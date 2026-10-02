@@ -2,7 +2,7 @@
 const { test } = require('@playwright/test');
 
 let webcontext;
-    test.beforeAll('Login Token Storage', async ({ browser }) => {
+    test.beforeAll('@API Login Token Storage', async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -22,15 +22,15 @@ let webcontext;
 });
 
 
-test('Login with storage session webcontext', async () => {
+test('@API Login with storage session webcontext', async () => {
 
         const page = await webcontext.newPage();
         await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
         console.log(await page.title());
-        await page.pause();
+       
 });
 
-test('Client Login Practice', async ({ browser }) => {
+test('@API Client Login Practice', async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
