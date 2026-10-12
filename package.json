@@ -13,11 +13,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@playwright/mcp": "^0.0.83",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.4.1",
     "allure-playwright": "^3.12.2"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^12.9.0"
+    "@cucumber/cucumber": "^12.9.0",
+    "@playwright/cli": "^0.1.22"
   }
 }
